@@ -1,0 +1,337 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 950" width="100%" height="100%">
+  <defs>
+    <style>
+      .main-title { font-family: "Times New Roman", Times, serif, system-ui; font-size: 32px; font-weight: 800; fill: #000000; letter-spacing: 1px; }
+      .entity-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 800; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .rel-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; font-weight: 800; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .attr-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 600; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .pk-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 800; fill: #000000; text-decoration: underline; text-anchor: middle; dominant-baseline: central; }
+      .card-label { font-family: "Times New Roman", Times, serif; font-size: 16px; font-weight: 700; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .role-label { font-family: "Times New Roman", Times, serif; font-size: 13px; font-style: italic; fill: #000000; }
+      
+      .strong-box { fill: #cbe2fe; stroke: #000000; stroke-width: 1.8; }
+      .weak-box-out { fill: #cbe2fe; stroke: #000000; stroke-width: 1.8; }
+      .weak-box-in  { fill: none; stroke: #000000; stroke-width: 1.2; }
+      .rel-diamond { fill: #dcfce7; stroke: #15803d; stroke-width: 1.8; }
+      .attr-oval { fill: #f1f3fd; stroke: #000000; stroke-width: 1.4; }
+      .line-single { stroke: #000000; stroke-width: 1.5; fill: none; }
+      .line-double { stroke: #000000; stroke-width: 3.5; fill: none; }
+      .line-double-in { stroke: #ffffff; stroke-width: 1.2; fill: none; }
+      .notes-text { font-family: "Times New Roman", Times, serif; font-size: 12.5px; fill: #111827; }
+    </style>
+  </defs>
+
+  <!-- Clean Canvas -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+
+  <!-- Main Title -->
+  <text x="675" y="45" class="main-title" text-anchor="middle">KAPA BANK – ER MODEL</text>
+
+  <!-- ================================================================= -->
+  <!-- 1. CUSTOMER ENTITY (Top Left) -->
+  <!-- ================================================================= -->
+  <!-- Lines to attributes -->
+  <line x1="260" y1="180" x2="185" y2="105" class="line-single" /> <!-- customer_id -->
+  <line x1="330" y1="180" x2="330" y2="105" class="line-single" /> <!-- name -->
+  <line x1="400" y1="180" x2="445" y2="105" class="line-single" /> <!-- email -->
+  <line x1="240" y1="195" x2="140" y2="160" class="line-single" /> <!-- phone -->
+  <line x1="240" y1="215" x2="140" y2="225" class="line-single" /> <!-- address -->
+
+  <!-- Attribute Ovals -->
+  <ellipse cx="185" cy="105" rx="58" ry="20" class="attr-oval" />
+  <text x="185" y="105" class="pk-title">customer_id</text>
+
+  <ellipse cx="330" cy="105" rx="46" ry="20" class="attr-oval" />
+  <text x="330" y="105" class="attr-title">name</text>
+
+  <ellipse cx="445" cy="105" rx="46" ry="20" class="attr-oval" />
+  <text x="445" y="105" class="attr-title">email</text>
+
+  <ellipse cx="140" cy="160" rx="48" ry="19" class="attr-oval" />
+  <text x="140" y="160" class="attr-title">phone</text>
+
+  <ellipse cx="140" cy="225" rx="48" ry="19" class="attr-oval" />
+  <text x="140" y="225" class="attr-title">address</text>
+
+  <!-- Entity Box: CUSTOMER (Strong) -->
+  <rect x="240" y="180" width="180" height="65" class="strong-box" />
+  <text x="330" y="212" class="entity-title">CUSTOMER</text>
+
+
+  <!-- ================================================================= -->
+  <!-- 2. USER ENTITY (Bottom Left) -->
+  <!-- ================================================================= -->
+  <!-- Lines to attributes -->
+  <line x1="245" y1="485" x2="160" y2="435" class="line-single" /> <!-- user_id -->
+  <line x1="245" y1="510" x2="155" y2="495" class="line-single" /> <!-- email -->
+  <line x1="245" y1="535" x2="150" y2="550" class="line-single" /> <!-- password_hash -->
+  <line x1="245" y1="555" x2="155" y2="605" class="line-single" /> <!-- role -->
+  <line x1="405" y1="485" x2="490" y2="465" class="line-single" /> <!-- is_active -->
+  <line x1="405" y1="520" x2="495" y2="520" class="line-single" /> <!-- last_login -->
+  <line x1="405" y1="550" x2="495" y2="575" class="line-single" /> <!-- created_at -->
+
+  <!-- Attribute Ovals -->
+  <ellipse cx="160" cy="435" rx="52" ry="19" class="attr-oval" />
+  <text x="160" y="435" class="pk-title">user_id</text>
+
+  <ellipse cx="155" cy="495" rx="46" ry="18" class="attr-oval" />
+  <text x="155" y="495" class="attr-title">email</text>
+
+  <ellipse cx="150" cy="550" rx="66" ry="18" class="attr-oval" />
+  <text x="150" y="550" class="attr-title">password_hash</text>
+
+  <ellipse cx="155" cy="605" rx="46" ry="18" class="attr-oval" />
+  <text x="155" y="605" class="attr-title">role</text>
+
+  <ellipse cx="490" cy="465" rx="46" ry="18" class="attr-oval" />
+  <text x="490" y="465" class="attr-title">is_active</text>
+
+  <ellipse cx="495" cy="520" rx="50" ry="18" class="attr-oval" />
+  <text x="495" y="520" class="attr-title">last_login</text>
+
+  <ellipse cx="495" cy="575" rx="50" ry="18" class="attr-oval" />
+  <text x="495" y="575" class="attr-title">created_at</text>
+
+  <!-- Entity Box: USER (Strong) -->
+  <rect x="245" y="475" width="160" height="95" class="strong-box" />
+  <text x="325" y="522" class="entity-title">USER</text>
+
+
+  <!-- Relationship: AUTHENTICATES THROUGH -->
+  <line x1="330" y1="245" x2="330" y2="310" class="line-single" />
+  <polygon points="330,310 400,345 330,380 260,345" class="rel-diamond" />
+  <text x="330" y="340" class="rel-title">AUTHENTICATES</text>
+  <text x="330" y="353" class="rel-title">THROUGH</text>
+  <line x1="330" y1="380" x2="330" y2="475" class="line-single" />
+  <text x="345" y="270" class="card-label">1</text>
+  <text x="345" y="450" class="card-label">0..1</text>
+
+
+  <!-- ================================================================= -->
+  <!-- 3. AUDIT_LOG ENTITY (Bottom Left / Center) -->
+  <!-- ================================================================= -->
+  <!-- Relationship: GENERATES -->
+  <line x1="325" y1="570" x2="325" y2="630" class="line-single" />
+  <polygon points="325,630 395,665 325,700 255,665" class="rel-diamond" />
+  <text x="325" y="665" class="rel-title">GENERATES</text>
+  <text x="340" y="595" class="card-label">1</text>
+
+  <!-- Total Participation to AUDIT_LOG -->
+  <line x1="325" y1="700" x2="325" y2="760" class="line-double" />
+  <line x1="325" y1="700" x2="325" y2="760" class="line-double-in" />
+  <text x="340" y="735" class="card-label">M</text>
+
+  <!-- Lines to attributes -->
+  <line x1="240" y1="775" x2="160" y2="735" class="line-single" /> <!-- audit_id -->
+  <line x1="240" y1="795" x2="155" y2="795" class="line-single" /> <!-- action -->
+  <line x1="240" y1="815" x2="155" y2="855" class="line-single" /> <!-- entity_type -->
+  <line x1="410" y1="770" x2="485" y2="730" class="line-single" /> <!-- entity_id -->
+  <line x1="410" y1="790" x2="485" y2="780" class="line-single" /> <!-- details -->
+  <line x1="410" y1="810" x2="495" y2="830" class="line-single" /> <!-- ip_address -->
+  <line x1="410" y1="825" x2="490" y2="880" class="line-single" /> <!-- created_at -->
+
+  <!-- Attribute Ovals -->
+  <ellipse cx="160" cy="735" rx="50" ry="19" class="attr-oval" />
+  <text x="160" y="735" class="pk-title">audit_id</text>
+
+  <ellipse cx="155" cy="795" rx="46" ry="19" class="attr-oval" />
+  <text x="155" y="795" class="attr-title">action</text>
+
+  <ellipse cx="155" cy="855" rx="55" ry="19" class="attr-oval" />
+  <text x="155" y="855" class="attr-title">entity_type</text>
+
+  <ellipse cx="485" cy="730" rx="48" ry="18" class="attr-oval" />
+  <text x="485" y="730" class="attr-title">entity_id</text>
+
+  <ellipse cx="485" cy="780" rx="46" ry="18" class="attr-oval" />
+  <text x="485" y="780" class="attr-title">details</text>
+
+  <ellipse cx="495" cy="830" rx="55" ry="18" class="attr-oval" />
+  <text x="495" y="830" class="attr-title">ip_address</text>
+
+  <ellipse cx="490" cy="880" rx="50" ry="18" class="attr-oval" />
+  <text x="490" y="880" class="attr-title">created_at</text>
+
+  <!-- Entity Box: AUDIT_LOG (Weak - Double Box) -->
+  <rect x="240" y="760" width="170" height="70" class="weak-box-out" />
+  <rect x="245" y="765" width="160" height="60" class="weak-box-in" />
+  <text x="325" y="795" class="entity-title">AUDIT_LOG</text>
+
+
+  <!-- ================================================================= -->
+  <!-- 4. BANK_ACCOUNT ENTITY (Top Right) -->
+  <!-- ================================================================= -->
+  <!-- Relationship: OWNS -->
+  <line x1="420" y1="205" x2="520" y2="205" class="line-single" />
+  <polygon points="590,165 670,205 590,245 510,205" class="rel-diamond" />
+  <text x="590" y="205" class="rel-title">OWNS</text>
+  <text x="445" y="195" class="card-label">1</text>
+
+  <!-- Total Participation: BANK_ACCOUNT to OWNS -->
+  <line x1="670" y1="205" x2="790" y2="205" class="line-double" />
+  <line x1="670" y1="205" x2="790" y2="205" class="line-double-in" />
+  <text x="765" y="195" class="card-label">M</text>
+
+  <!-- Lines to attributes -->
+  <line x1="815" y1="175" x2="760" y2="105" class="line-single" /> <!-- account_id -->
+  <line x1="860" y1="175" x2="880" y2="95" class="line-single" /> <!-- account_number -->
+  <line x1="930" y1="175" x2="995" y2="100" class="line-single" /> <!-- account_type -->
+  <line x1="975" y1="195" x2="1050" y2="155" class="line-single" /> <!-- balance -->
+  <line x1="975" y1="215" x2="1060" y2="215" class="line-single" /> <!-- status -->
+  <line x1="975" y1="235" x2="1065" y2="275" class="line-single" /> <!-- created_date -->
+
+  <!-- Attribute Ovals -->
+  <ellipse cx="760" cy="105" rx="55" ry="19" class="attr-oval" />
+  <text x="760" y="105" class="pk-title">account_id</text>
+
+  <ellipse cx="880" cy="95" rx="65" ry="19" class="attr-oval" />
+  <text x="880" y="95" class="attr-title">account_number</text>
+
+  <ellipse cx="995" cy="100" rx="55" ry="19" class="attr-oval" />
+  <text x="995" y="100" class="attr-title">account_type</text>
+
+  <ellipse cx="1050" cy="155" rx="46" ry="18" class="attr-oval" />
+  <text x="1050" y="155" class="attr-title">balance</text>
+
+  <ellipse cx="1060" cy="215" rx="46" ry="18" class="attr-oval" />
+  <text x="1060" y="215" class="attr-title">status</text>
+
+  <ellipse cx="1065" cy="275" rx="55" ry="18" class="attr-oval" />
+  <text x="1065" y="275" class="attr-title">created_date</text>
+
+  <!-- Entity Box: BANK_ACCOUNT (Weak - Double Box) -->
+  <rect x="790" y="175" width="185" height="70" class="weak-box-out" />
+  <rect x="795" y="180" width="175" height="60" class="weak-box-in" />
+  <text x="882" y="210" class="entity-title">BANK_ACCOUNT</text>
+
+
+  <!-- ================================================================= -->
+  <!-- 5. BANK_TRANSACTION ENTITY (Middle Right) -->
+  <!-- ================================================================= -->
+  <!-- Relationship: HAS -->
+  <line x1="882" y1="245" x2="882" y2="310" class="line-single" />
+  <polygon points="882,310 932,345 882,380 832,345" class="rel-diamond" />
+  <text x="882" y="345" class="rel-title">HAS</text>
+  <text x="898" y="270" class="card-label">1</text>
+
+  <!-- Total Participation: BANK_TRANSACTION to HAS -->
+  <line x1="882" y1="380" x2="882" y2="440" class="line-double" />
+  <line x1="882" y1="380" x2="882" y2="440" class="line-double-in" />
+  <text x="898" y="410" class="card-label">M</text>
+
+  <!-- Lines to attributes -->
+  <line x1="825" y1="445" x2="770" y2="415" class="line-single" /> <!-- transaction_id -->
+  <line x1="825" y1="475" x2="770" y2="480" class="line-single" /> <!-- transaction_type -->
+  <line x1="825" y1="500" x2="775" y2="540" class="line-single" /> <!-- amount -->
+  <line x1="950" y1="455" x2="1055" y2="455" class="line-single" /> <!-- transaction_date -->
+  <line x1="950" y1="490" x2="1050" y2="510" class="line-single" /> <!-- status -->
+
+  <!-- Attribute Ovals -->
+  <ellipse cx="770" cy="415" rx="62" ry="19" class="attr-oval" />
+  <text x="770" y="415" class="pk-title">transaction_id</text>
+
+  <ellipse cx="770" cy="480" rx="62" ry="18" class="attr-oval" />
+  <text x="770" y="480" class="attr-title">transaction_type</text>
+
+  <ellipse cx="775" cy="540" rx="46" ry="18" class="attr-oval" />
+  <text x="775" y="540" class="attr-title">amount</text>
+
+  <ellipse cx="1055" cy="455" rx="60" ry="18" class="attr-oval" />
+  <text x="1055" y="455" class="attr-title">transaction_date</text>
+
+  <ellipse cx="1050" cy="510" rx="46" ry="18" class="attr-oval" />
+  <text x="1050" y="510" class="attr-title">status</text>
+
+  <!-- Entity Box: BANK_TRANSACTION (Weak - Double Box) -->
+  <rect x="830" y="440" width="180" height="75" class="weak-box-out" />
+  <rect x="835" y="445" width="170" height="65" class="weak-box-in" />
+  <text x="920" y="478" class="entity-title">BANK_TRANSACTION</text>
+
+
+  <!-- ================================================================= -->
+  <!-- 6. BANK_TRANSFER ENTITY (Bottom Right) -->
+  <!-- ================================================================= -->
+  <!-- SENDS (Source Account) path -->
+  <path d="M 800 245 L 800 600 L 730 650" class="line-single" />
+  <polygon points="730,650 775,680 730,710 685,680" class="rel-diamond" />
+  <text x="730" y="680" class="rel-title">SENDS</text>
+  <text x="690" y="620" class="role-label">(Source Account)</text>
+  <text x="710" y="635" class="card-label">1</text>
+
+  <!-- Total Participation from SENDS to BANK_TRANSFER -->
+  <path d="M 730 710 L 730 740 L 830 740" class="line-double" />
+  <path d="M 730 710 L 730 740 L 830 740" class="line-double-in" />
+  <text x="760" y="730" class="card-label">M</text>
+
+  <!-- RECEIVES (Destination Account) path -->
+  <path d="M 960 245 L 1020 245 L 1020 630 L 1100 650" class="line-single" />
+  <polygon points="1100,650 1145,680 1100,710 1055,680" class="rel-diamond" />
+  <text x="1100" y="680" class="rel-title">RECEIVES</text>
+  <text x="1050" y="620" class="role-label">(Destination Account)</text>
+  <text x="1115" y="635" class="card-label">1</text>
+
+  <!-- Total Participation from RECEIVES to BANK_TRANSFER -->
+  <path d="M 1100 710 L 1100 740 L 1010 740" class="line-double" />
+  <path d="M 1100 710 L 1100 740 L 1010 740" class="line-double-in" />
+  <text x="1070" y="730" class="card-label">M</text>
+
+  <!-- Lines to attributes -->
+  <line x1="850" y1="765" x2="740" y2="820" class="line-single" /> <!-- transfer_id -->
+  <line x1="880" y1="765" x2="850" y2="820" class="line-single" /> <!-- amount -->
+  <line x1="950" y1="765" x2="960" y2="820" class="line-single" /> <!-- transfer_date -->
+  <line x1="990" y1="765" x2="1060" y2="820" class="line-single" /> <!-- status -->
+
+  <!-- Attribute Ovals -->
+  <ellipse cx="740" cy="820" rx="55" ry="19" class="attr-oval" />
+  <text x="740" y="820" class="pk-title">transfer_id</text>
+
+  <ellipse cx="850" cy="820" rx="46" ry="18" class="attr-oval" />
+  <text x="850" y="820" class="attr-title">amount</text>
+
+  <ellipse cx="960" cy="820" rx="55" ry="18" class="attr-oval" />
+  <text x="960" y="820" class="attr-title">transfer_date</text>
+
+  <ellipse cx="1060" cy="820" rx="46" ry="18" class="attr-oval" />
+  <text x="1060" y="820" class="attr-title">status</text>
+
+  <!-- Entity Box: BANK_TRANSFER (Weak - Double Box) -->
+  <rect x="815" y="695" width="200" height="70" class="weak-box-out" />
+  <rect x="820" y="700" width="190" height="60" class="weak-box-in" />
+  <text x="915" y="730" class="entity-title">BANK_TRANSFER</text>
+
+
+  <!-- ================================================================= -->
+  <!-- 7. FOOTER NOTES & ACADEMIC LEGEND (Exact match with your sheet) -->
+  <!-- ================================================================= -->
+  <!-- Notes on Left -->
+  <g transform="translate(30, 890)">
+    <text x="0" y="0" class="notes-text" style="font-weight:700;">Notes:</text>
+    <text x="0" y="16" class="notes-text">1. Underlined attribute indicates the primary key.</text>
+    <text x="0" y="32" class="notes-text">2. A customer can own multiple bank accounts.</text>
+    <text x="0" y="48" class="notes-text">3. A customer can have at most one user account (optional).</text>
+  </g>
+
+  <!-- Notes in Middle -->
+  <g transform="translate(420, 890)">
+    <text x="0" y="16" class="notes-text">4. A user can generate multiple audit log entries.</text>
+    <text x="0" y="32" class="notes-text">5. A bank account can have multiple transactions.</text>
+    <text x="0" y="48" class="notes-text">6. A bank account can send and receive multiple transfers (each transfer has exactly one source and one destination account).</text>
+  </g>
+
+  <!-- Notation Box on Right (Bordered Table) -->
+  <g transform="translate(980, 860)">
+    <rect x="0" y="0" width="250" height="85" fill="#ffffff" stroke="#6b7280" stroke-width="1.2" />
+    
+    <rect x="15" y="10" width="36" height="15" class="strong-box" />
+    <text x="75" y="21" class="notes-text">Entity (Rectangle)</text>
+
+    <ellipse cx="33" cy="38" rx="18" ry="7" class="attr-oval" />
+    <text x="75" y="41" class="notes-text">Attribute (Ellipse)</text>
+
+    <polygon points="33,52 45,59 33,66 21,59" class="rel-diamond" />
+    <text x="75" y="61" class="notes-text">Relationship (Diamond)</text>
+
+    <line x1="15" y1="78" x2="51" y2="78" class="line-single" />
+    <text x="75" y="80" class="notes-text">Connection (Line)</text>
+  </g>
+</svg>

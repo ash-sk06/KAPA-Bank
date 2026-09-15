@@ -12,9 +12,9 @@
     </div>
 
     <!-- Prominent Academic Project Notice to prevent automated crawler false positives -->
-    <div class="academic-banner-notice" style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px 14px; margin-bottom: 20px; font-size: 12px; color: #1e40af; line-height: 1.45;" role="note">
-      <strong>🎓 Academic Demonstration Notice:</strong>
-      This system is a student coursework project for database transaction management. It is <strong>NOT</strong> an operational financial institution. Do not enter personal real-world banking passwords. Use the evaluation credentials provided below.
+    <div class="academic-banner-notice" style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 14px 16px; margin-bottom: 20px; font-size: 12.5px; color: #1e40af; line-height: 1.5;" role="note">
+      <strong>🎓 Student Laboratory Demonstration:</strong>
+      This application is an educational coursework demo for database transaction management. It is <strong>NOT</strong> an operational financial institution or commercial service. Do <strong>NOT</strong> enter personal banking passwords. Please use the pre-configured academic evaluation credentials below.
     </div>
 
     {% if error %}
@@ -29,29 +29,29 @@
       <input type="hidden" name="next_url" value="{{ next_url|default('') }}">
 
       <div class="form-group">
-        <label for="email">Email Address <span class="required-mark" aria-hidden="true">*</span></label>
+        <label for="email">Student / Evaluator Email <span class="required-mark" aria-hidden="true">*</span></label>
         <input 
           type="email" 
           id="email" 
           name="email" 
           value="{{ email|default('') }}" 
           required 
-          autocomplete="email" 
-          placeholder="name@example.com"
+          autocomplete="off" 
+          placeholder="e.g. demo@kapabank.com"
           class="form-control"
           aria-required="true">
       </div>
 
       <div class="form-group">
-        <label for="password">Password <span class="required-mark" aria-hidden="true">*</span></label>
+        <label for="password">Evaluation Password <span class="required-mark" aria-hidden="true">*</span></label>
         <input 
           type="password" 
           id="password" 
           name="password" 
           value="{{ password|default('') }}"
           required 
-          autocomplete="current-password" 
-          placeholder="Enter your password"
+          autocomplete="off" 
+          placeholder="e.g. Demo@123"
           class="form-control"
           aria-required="true">
       </div>

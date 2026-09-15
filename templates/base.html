@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="application-name" content="KAPA Bank Academic DBMS Project">
-  <meta name="description" content="Academic DBMS Laboratory Demonstration Project — Bank Transaction Management System for Course Evaluation at VIT. NOT a real bank.">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="classification" content="Education / Academic Student Project">
+  <meta name="application-name" content="KAPA Bank DBMS Academic Project">
+  <meta name="description" content="Educational Coursework Demonstration: Relational Database Transaction Management System at Vellore Institute of Technology. NOT a commercial bank.">
   <title>{% block title %}Academic DBMS Project | KAPA Bank{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
@@ -23,7 +25,7 @@
           <div class="nav-brand-icon" aria-hidden="true">K</div>
           <div class="nav-brand-text">
             <strong>KAPA BANK</strong>
-            <small>{% if current_user and current_user.role == 'ADMIN' %}ADMINISTRATIVE CONSOLE{% elif current_user and current_user.is_demo %}DBMS TRANSACTION CONTROL DEMO{% else %}ONLINE BANKING PORTAL{% endif %}</small>
+            <small>{% if current_user and current_user.role == 'ADMIN' %}ADMINISTRATIVE CONSOLE{% elif current_user and current_user.is_demo %}DBMS TRANSACTION CONTROL DEMO{% else %}DBMS STUDENT DEMONSTRATION PORTAL{% endif %}</small>
           </div>
         </a>
 

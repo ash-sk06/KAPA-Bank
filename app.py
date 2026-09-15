@@ -56,6 +56,16 @@ def inject_global_template_context():
     }
 
 
+@app.after_request
+def add_security_and_academic_headers(response):
+    """Signals to web crawlers, security bots, and browsers that this is an educational project."""
+    response.headers["X-Robots-Tag"] = "noindex, nofollow, noarchive, nosnippet"
+    response.headers["X-Academic-Project"] = "VIT DBMS Student Coursework - NOT A REAL BANK"
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    return response
+
+
 # ============================================================
 # HELPER VALIDATION & RESPONSE FUNCTIONS
 # ============================================================
